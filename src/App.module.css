@@ -2,9 +2,62 @@ body
 {
     background-color: rgb(250,250,250);
 }
-.container{
+.app-container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.image{
+    width: 350px;
+    margin-top: 40px;
+}
+.chart-container
+{
+    display: flex;
+    justify-content: center;
+    width: 85%;
+}
+.formControl
+{
+    margin-bottom: 40px !important;
+    display: inline;
+    width: 30%;
+    justify-content: center;
+}
+.card-container
+{
+    margin: 50px 0;
+    width: 85%;
+}
+.card{
+    margin: 0 2% !important;
+}
+.infected{
+    border-bottom: 10px solid rgba(0, 0, 255,0.8);
+}
+.recovered{
+    border-bottom: 10px solid rgba(0, 255, 0,0.8);
+}
+.deaths{
+    border-bottom: 10px solid rgba(255, 0, 0,0.8);
+}
+
+@media(max-width:770px)
+{
+    .app-container{
+        margin: 0 10%;
+    }
+    .image
+    {
+        width: 100%;
+    }
+    .card{
+        margin: 2% 0 !important;
+
+    }
+    .chart-container
+    {
+        width: 100%;
+    }
 }

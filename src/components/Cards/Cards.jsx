@@ -1,15 +1,13 @@
 import React from "react";
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
-import "./Cards.module.css";
 import CountUp from "react-countup";
 
 const Cards = (props) => {
-  console.log(props);
   if (!props.data.confirmed) {
     return <h3>Loading....</h3>;
   }
   return (
-    <div className="container">
+    <div className="card-container">
       <Grid container spacing={3} justify="center">
         <Grid item component={Card} xs={12} md={3} className="card infected">
           <CardContent>
@@ -20,14 +18,14 @@ const Cards = (props) => {
               <CountUp
                 start={0}
                 end={props.data.confirmed.value}
-                duration={2.5}
+                duration={3}
                 separator=","
               />
             </Typography>
             <Typography color="textSecondary">
               {new Date(props.data.lastUpdate).toDateString()}
             </Typography>
-            <Typography variant="body2">Number of active cases</Typography>
+            <Typography variant="body2">Number of active cases of COVID-19</Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className="card recovered">
@@ -46,7 +44,7 @@ const Cards = (props) => {
             <Typography color="textSecondary">
               {new Date(props.data.lastUpdate).toDateString()}
             </Typography>
-            <Typography variant="body2">Number of Recovered cases</Typography>
+            <Typography variant="body2">Number of recovered cases of COVID-19</Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className="card deaths">
@@ -65,7 +63,7 @@ const Cards = (props) => {
             <Typography color="textSecondary">
               {new Date(props.data.lastUpdate).toDateString()}
             </Typography>
-            <Typography variant="body2">Number of Deaths</Typography>
+            <Typography variant="body2">Number of deaths of COVID-19</Typography>
           </CardContent>
         </Grid>
       </Grid>
