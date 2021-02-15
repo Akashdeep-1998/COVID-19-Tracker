@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.module.css';
+import './App.css';
 import Cards from './components/Cards/Cards';
 import Chart from './components/Chart/Chart';
 import Country from './components/Country/Country'
