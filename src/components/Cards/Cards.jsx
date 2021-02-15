@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 
 const Cards = (props) => {
   if (!props.data.confirmed) {
-    return <h3>Loading....</h3>;
+    return <div className="loader"></div>;
   }
   return (
     <div className="card-container">
@@ -25,7 +25,9 @@ const Cards = (props) => {
             <Typography color="textSecondary">
               {new Date(props.data.lastUpdate).toDateString()}
             </Typography>
-            <Typography variant="body2">Number of active cases of COVID-19</Typography>
+            <Typography variant="body2">
+              Number of active cases of COVID-19
+            </Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className="card recovered">
@@ -44,7 +46,9 @@ const Cards = (props) => {
             <Typography color="textSecondary">
               {new Date(props.data.lastUpdate).toDateString()}
             </Typography>
-            <Typography variant="body2">Number of recovered cases of COVID-19</Typography>
+            <Typography variant="body2">
+              Number of recovered cases of COVID-19
+            </Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className="card deaths">
@@ -63,7 +67,9 @@ const Cards = (props) => {
             <Typography color="textSecondary">
               {new Date(props.data.lastUpdate).toDateString()}
             </Typography>
-            <Typography variant="body2">Number of deaths of COVID-19</Typography>
+            <Typography variant="body2">
+              Number of deaths of COVID-19
+            </Typography>
           </CardContent>
         </Grid>
       </Grid>
